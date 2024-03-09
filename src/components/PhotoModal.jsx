@@ -8,14 +8,8 @@ const PhotoModal = () => {
   const dispatch = useDispatch();
   const WhichPhotoClicked = useSelector(selectClickedPhoto);
 
-  useEffect(() => {
-    if (WhichPhotoClicked) {
-      console.log(WhichPhotoClicked);
-    }
-  }, [WhichPhotoClicked]);
 
   if (WhichPhotoClicked) {
-    console.log('!!!')
     return (
       <dialog open className="photo-modal-container photo-modal photo-modal-width-height photo-modal-alignment">
         <IoExitOutline onClick={()=>dispatch(setClickedPhoto(null))}/>

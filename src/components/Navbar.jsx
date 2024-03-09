@@ -4,7 +4,7 @@ import "../components-css/Navbar.css";
 
 const Navbar = ({ onAboutClick, onPhotosClick, onContactClick }) => {
   return (
-    <nav>
+    <nav className='align-ul'>
       <ul>
         <li onClick={onAboutClick}>About</li>
         <li onClick={onContactClick}>Contact</li>

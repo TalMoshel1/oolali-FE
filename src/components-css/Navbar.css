@@ -19,7 +19,14 @@ ul {
 
 @media screen and (max-width: 400px), (orientation: portrait) {
   ul {
-    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-inline-start: 0px;
+
+  }
+
+  .align-ul {
+    justify-content: center;
   }
 }
 

@@ -63,11 +63,6 @@ function App() {
     );
   }
 
-  // return (
-  //   <div className="app">
-  //     <PhotoModal />
-  //   </div>
-  // );
 
 
 export default App;

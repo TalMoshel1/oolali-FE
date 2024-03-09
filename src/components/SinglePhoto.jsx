@@ -7,17 +7,17 @@ import {list} from '../gallery/mockList.js'
 import '../components-css/SinglePhoto.css'
 
 const SinglePhoto = () => {
-  const navigate = useNavigate(); // Use useNavigate instead of useHistory
-  const WhichPhotoClicked = useSelector(selectClickedPhoto);
+  const navigate = useNavigate(); 
   const [photo, setPhoto] = useState(null)
   const handleGoBack = () => {
     navigate(-1);
   };
 
-  const id = useParams()
+  const {id} = useParams()
+  
 
   useEffect(()=>{
-    const photo = list.filter((photo)=>{return photo.id == id.id})
+    const photo = list.filter((photo)=>{return photo.id == id})
     setPhoto(photo[0])
   })
 
@@ -25,8 +25,8 @@ const SinglePhoto = () => {
 
     return (
         <div className='single-photo-container'>
-          <button onClick={handleGoBack}>Go Back</button>
-          <img src={photo.src} alt="" id={photo.id} />
+          <button className='go-back' onClick={handleGoBack}>Go Back</button>
+          <img className='single-img' src={photo.src} alt="" id={photo.id} />
         </div>
       );
   }
