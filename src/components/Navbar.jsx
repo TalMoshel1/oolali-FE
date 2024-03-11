@@ -10,9 +10,6 @@ const Navbar = ({ onAboutClick, onPhotosClick, onContactClick }) => {
         <li onClick={onContactClick}>Contact</li>
         <li onClick={onPhotosClick}>Photos</li>
       </ul>
-      {/* <div className="icon-container">
-        <GiHamburgerMenu size="50" />
-      </div> */}
     </nav>
   );
 };

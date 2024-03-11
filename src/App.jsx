@@ -48,6 +48,7 @@ function App() {
             </div>
           </div>
 
+          <div className='viewport-minus-navbar'>
           <div
             className="photos-arrows-align-top photos-arrows-direction-column last-page-height-margin"
             ref={photosRef}
@@ -56,6 +57,10 @@ function App() {
 
 
           </div>
+
+
+          </div>
+
         </div>
 
         {isMessageSent && <Modal text="הודעתך נשלחה בהצלחה" />}
