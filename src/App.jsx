@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
 import { selectIsMessageSent } from "./features/messageSlice";
 import { selectClickedPhoto, setClickedPhoto } from "./features/photoSlice";
@@ -11,10 +11,17 @@ import Modal from "./components/Modal";
 import "./App.css";
 import ThreePhotoContainer from "./components/ThreePhotoContainer.jsx";
 import PhotoModal from "./components/PhotoModal.jsx";
+import { selectTheme } from "./features/themeSlice.js";
 
 function App() {
   const isMessageSent = useSelector(selectIsMessageSent);
   const WhichPhotoClicked = useSelector(selectClickedPhoto);
+  const theme = useSelector(selectTheme)
+
+
+  useEffect(()=>{
+    console.log(theme)
+  },[theme])
 
   const aboutRef = useRef(null);
   const photosRef = useRef(null);

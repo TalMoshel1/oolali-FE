@@ -1,23 +1,39 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
-  colors: {
-    backgroundColor: '#FFFFFF',
-    headerBackground: "#4285F4",
-    borderColor: '#262628',
-    itemBackground:  '#F5F5F5',
-    lettersSmall: '#787878',
-    lettersBig: '#212121',
-    darkModelettersBig: '#E1E1E1',
-    lightModelettersBig: '#E1E1E1',
+// const initialState = {
+//   colors: {
+//     backgroundColor: '#FFFFFF',
+//     headerBackground: "#4285F4",
+//     borderColor: '#262628',
+//     itemBackground:  '#F5F5F5',
+//     lettersSmall: '#787878',
+//     lettersBig: '#212121',
+//     darkModelettersBig: '#E1E1E1',
+//     lightModelettersBig: '#E1E1E1',
 
-  },
-  darkMode: false,
-};
+//   },
+//   darkMode: false,
+// };
 
-const themeSlice = createSlice({
+export const themeSlice = createSlice({
   name: "theme",
-  initialState,
+  initialState: {
+    colors: {
+      firstPageBackgroundColor: '##FFC0CB',
+      headerBackground: "black",
+      secondPageBackgroundColor: '##FF69B4',
+      thirdPageBackgroundColor: '##FF1493',
+      headerTextColor: 'white'
+
+      // itemBackground:  '#F5F5F5',
+      // lettersSmall: '#787878',
+      // lettersBig: '#212121',
+      // darkModelettersBig: '#E1E1E1',
+      // lightModelettersBig: '#E1E1E1',
+  
+    },
+    darkMode: false,
+  },
   reducers: {
     setDarkTheme(state) {
       state.colors.backgroundColor = '#000000'
@@ -43,4 +59,4 @@ const themeSlice = createSlice({
 });
 
 
-export default themeSlice
+export const selectTheme = (state) => state.theme.colors;

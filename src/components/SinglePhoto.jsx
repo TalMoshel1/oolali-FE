@@ -25,7 +25,7 @@ const SinglePhoto = () => {
 
     return (
         <div className='single-photo-container'>
-          <button className='go-back' onClick={handleGoBack}>Go Back</button>
+          {/* <button className='go-back' onClick={handleGoBack}>Go Back</button> */}
           <img className='single-img' src={photo.src} alt="" id={photo.id} />
         </div>
       );

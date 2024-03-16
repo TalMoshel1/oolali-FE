@@ -21,7 +21,7 @@ const FowardsButton = () => {
 
   return (
     <button className="arrow arrow-margin-top">
-      <FaArrowAltCircleRight size='75px'  fill={`${locationValue === 'end' && 'grey'}`} aria-label='fowards photo' onClick={()=>{dispatch(Forwards())}}/>
+      <FaArrowAltCircleRight size='5vh'  fill={`${locationValue === 'end' && 'grey'}`} aria-label='fowards photo' onClick={()=>{dispatch(Forwards())}}/>
 
     </button>
   )

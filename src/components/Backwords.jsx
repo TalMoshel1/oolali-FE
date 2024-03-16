@@ -16,7 +16,7 @@ const BackwordsButton = () => {
 
   return (
     <button className="arrow arrow-margin-top">
-      <FaArrowAltCircleLeft fill={`${locationValue === 'start' && 'grey'}`} size='75px'  aria-label='Backwords photo' onClick={()=>{dispatch(Backwords())}}/>
+      <FaArrowAltCircleLeft fill={`${locationValue === 'start' && 'grey'}`} size='5vh'   aria-label='Backwords photo' onClick={()=>{dispatch(Backwords())}}/>
 
     </button>
   )
